@@ -663,3 +663,7 @@ checksum = "cbba8f17ef3abe2e3c14376b746d114d"
 [exercises."part07-Part07_02.LiquidContainers2"]
 id = 83278
 checksum = "bdb7c713d1b49c50a36f8092f90048ee"
+
+[exercises."part07-Part07_03.Sorting"]
+id = 83279
+checksum = "031130e923a9aac3c8a4453c8899b2d2"
