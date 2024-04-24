@@ -44,10 +44,32 @@ public class Searching {
     }
 
     public static int linearSearch(ArrayList<Book> books, int searchedId) {
+        int index = 0;
+        for(Book a : books){
+            if(a.getId() == searchedId){
+                return index;
+            }else{
+                index++;
+            }
+        }
         return -1;
     }
-
+    
+// while(end > begin) didn't work, but while(begin <= end) did
     public static int binarySearch(ArrayList<Book> books, long searchedId) {
+        int begin = 0;
+        int end = books.size() - 1;
+        while(begin <= end){
+            int middle = (begin + end) / 2;
+            if(books.get(middle).getId() == searchedId){
+                return middle;
+            }else if(books.get(middle).getId() < searchedId){
+                begin = middle + 1;
+            }
+            else if(books.get(middle).getId() > searchedId){
+                end = middle - 1;
+            }
+        }
         return -1;
     }
 }
